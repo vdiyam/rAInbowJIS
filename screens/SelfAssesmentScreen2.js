@@ -16,13 +16,13 @@ export default function SelfAssessmentScreen2({ navigation }) {
   return (
     <View style={styles.container}>
       <Text style={styles.question}>
-        How would you rate your mental health?
+        Question 2: How would you rate your mental health?
       </Text>
       <View style={styles.ratingContainer}>
         <TouchableOpacity
           style={[
             styles.button,
-            { backgroundColor: rating === 1 ? "#87CEFA" : "#87CEFA" },
+            { backgroundColor: rating === 1 ? "#E0E0B0" : "#E0E0B0" },
           ]}
           onPress={() => setRating(1)}
         >
@@ -31,7 +31,7 @@ export default function SelfAssessmentScreen2({ navigation }) {
         <TouchableOpacity
           style={[
             styles.button,
-            { backgroundColor: rating === 2 ? "#87CEEB" : "skyblue" },
+            { backgroundColor: rating === 2 ? "#F0E68C" : "#FFD700" },
           ]}
           onPress={() => setRating(2)}
         >
@@ -40,7 +40,7 @@ export default function SelfAssessmentScreen2({ navigation }) {
         <TouchableOpacity
           style={[
             styles.button,
-            { backgroundColor: rating === 3 ? "#0000FF" : "blue" },
+            { backgroundColor: rating === 3 ? "#FFFF00" : "#FFA500" },
           ]}
           onPress={() => setRating(3)}
         >
@@ -49,7 +49,7 @@ export default function SelfAssessmentScreen2({ navigation }) {
         <TouchableOpacity
           style={[
             styles.button,
-            { backgroundColor: rating === 4 ? "#000080" : "navy" },
+            { backgroundColor: rating === 4 ? "#FFD700" : "#F0E68C" },
           ]}
           onPress={() => setRating(4)}
         >
@@ -58,7 +58,7 @@ export default function SelfAssessmentScreen2({ navigation }) {
         <TouchableOpacity
           style={[
             styles.button,
-            { backgroundColor: rating === 5 ? "#191970" : "midnightblue" },
+            { backgroundColor: rating === 5 ? "#FFD700" : "#FFA500" },
           ]}
           onPress={() => setRating(5)}
         >

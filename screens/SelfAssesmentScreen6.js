@@ -25,17 +25,66 @@ export default function SelfAssesmentScreen6({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.question}>Question 1: How was your day?</Text>
+      <Text style={styles.question}>
+        Question 6: What is your energy level today?
+      </Text>
       <View style={styles.ratingContainer}>
-        <Button title="1. Very Bad" onPress={() => setRating(1)} />
-        <Button title="2. Bad" onPress={() => setRating(2)} />
-        <Button title="3. Neutral" onPress={() => setRating(3)} />
-        <Button title="4. Good" onPress={() => setRating(4)} />
-        <Button title="5. Very Good" onPress={() => setRating(5)} />
+        <TouchableOpacity
+          style={[
+            styles.button,
+            { backgroundColor: rating === 1 ? "#E0E0B0" : "#E0E0B0" },
+          ]}
+          onPress={() => setRating(1)}
+        >
+          <Text style={styles.buttonText}>1. Very Bad</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={[
+            styles.button,
+            { backgroundColor: rating === 2 ? "#F0E68C" : "#FFD700" },
+          ]}
+          onPress={() => setRating(2)}
+        >
+          <Text style={styles.buttonText}>2. Bad</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={[
+            styles.button,
+            { backgroundColor: rating === 3 ? "#FFFF00" : "#FFA500" },
+          ]}
+          onPress={() => setRating(3)}
+        >
+          <Text style={styles.buttonText}>3. Neither Good nor Bad</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={[
+            styles.button,
+            { backgroundColor: rating === 4 ? "#FFD700" : "#F0E68C" },
+          ]}
+          onPress={() => setRating(4)}
+        >
+          <Text style={styles.buttonText}>4. Good</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={[
+            styles.button,
+            { backgroundColor: rating === 5 ? "#FFD700" : "#FFA500" },
+          ]}
+          onPress={() => setRating(5)}
+        >
+          <Text style={styles.buttonText}>5. Very Good</Text>
+        </TouchableOpacity>
       </View>
       <View style={styles.buttonContainer}>
-        <Button title="Back" onPress={() => navigation.goBack()} />
-        <Button title="Next" onPress={handleNext} />
+        <TouchableOpacity
+          onPress={() => navigation.goBack()}
+          style={styles.navButton}
+        >
+          <Text style={styles.buttonText}>Back</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={handleNext} style={styles.navButton}>
+          <Text style={styles.buttonText}>Next</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -54,12 +103,32 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   ratingContainer: {
-    flexDirection: "row",
     marginBottom: 20,
+  },
+  button: {
+    backgroundColor: "lightgray",
+    padding: 10,
+    borderRadius: 5,
+    marginBottom: 10,
+    height: 40,
+    width: 300,
+    alignItems: "center",
+  },
+  buttonText: {
+    fontSize: 16,
+    fontWeight: "bold",
+    color: "white",
   },
   buttonContainer: {
     flexDirection: "row",
     justifyContent: "space-between",
     width: "100%",
+  },
+  navButton: {
+    backgroundColor: "lightgray",
+    padding: 10,
+    borderRadius: 5,
+    width: 100,
+    alignItems: "center",
   },
 });
