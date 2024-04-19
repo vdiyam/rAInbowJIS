@@ -1,11 +1,10 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import {
   SafeAreaView,
   Text,
   StyleSheet,
   View,
   TouchableOpacity,
-  Button,
   ImageBackground,
 } from "react-native";
 
@@ -13,6 +12,7 @@ export default function SelfAssesmentScreen10({ navigation }) {
   const [rating, setRating] = useState(null);
 
   const handleNext = () => {
+    // Check if a rating has been selected
     if (rating !== null) {
       // If rating is selected, navigate to the next screen
       navigation.navigate("Home");
@@ -24,17 +24,21 @@ export default function SelfAssesmentScreen10({ navigation }) {
 
   return (
     <SafeAreaView style={styles.container}>
+      {/* Background Image */}
       <ImageBackground
         style={styles.background}
         source={require("../assets/selfasses.png")}
         resizeMode="cover"
       >
         <View style={styles.innerContainer}>
+          {/* Question */}
           <Text style={styles.question}>
             Question 10: Rate your want/need and openness to seeking external
             support today?
           </Text>
+          {/* Rating Options */}
           <View style={styles.ratingContainer}>
+            {/* Option 1 */}
             <TouchableOpacity
               style={[
                 styles.button,
@@ -44,6 +48,7 @@ export default function SelfAssesmentScreen10({ navigation }) {
             >
               <Text style={styles.buttonText}>1. Very Bad</Text>
             </TouchableOpacity>
+            {/* Option 2 */}
             <TouchableOpacity
               style={[
                 styles.button,
@@ -53,6 +58,7 @@ export default function SelfAssesmentScreen10({ navigation }) {
             >
               <Text style={styles.buttonText}>2. Bad</Text>
             </TouchableOpacity>
+            {/* Option 3 */}
             <TouchableOpacity
               style={[
                 styles.button,
@@ -62,6 +68,7 @@ export default function SelfAssesmentScreen10({ navigation }) {
             >
               <Text style={styles.buttonText}>3. Neither Good nor Bad</Text>
             </TouchableOpacity>
+            {/* Option 4 */}
             <TouchableOpacity
               style={[
                 styles.button,
@@ -71,6 +78,7 @@ export default function SelfAssesmentScreen10({ navigation }) {
             >
               <Text style={styles.buttonText}>4. Good</Text>
             </TouchableOpacity>
+            {/* Option 5 */}
             <TouchableOpacity
               style={[
                 styles.button,
@@ -80,14 +88,27 @@ export default function SelfAssesmentScreen10({ navigation }) {
             >
               <Text style={styles.buttonText}>5. Very Good</Text>
             </TouchableOpacity>
+            {/* Option 6 (Prefer not to answer) */}
+            <TouchableOpacity
+              style={[
+                styles.button,
+                { backgroundColor: rating === 6 ? "turquoise" : "gray" },
+              ]}
+              onPress={() => setRating(6)}
+            >
+              <Text style={styles.buttonText}>Prefer not to answer</Text>
+            </TouchableOpacity>
           </View>
+          {/* Navigation Buttons */}
           <View style={styles.buttonContainer}>
+            {/* Back Button */}
             <TouchableOpacity
               onPress={() => navigation.goBack()}
               style={styles.navButton}
             >
               <Text style={styles.buttonText}>Back</Text>
             </TouchableOpacity>
+            {/* Home Button */}
             <TouchableOpacity onPress={handleNext} style={styles.navButton}>
               <Text style={styles.buttonText}>Home</Text>
             </TouchableOpacity>
