@@ -14,7 +14,7 @@ export default function SelfAssessmentScreen2({ navigation }) {
   const handleNext = () => {
     // Check if a rating has been selected
     if (rating !== null) {
-      console.log("Rating selected:", rating);
+      console.log("Q2 Rating selected:", rating);
       // Navigate to the next screen
       navigation.navigate("SelfAssessmentScreen3");
     } else {

@@ -14,6 +14,7 @@ export default function SelfAssessmentScreen5({ navigation }) {
   const handleNext = () => {
     // Check if a rating has been selected
     if (rating !== null) {
+      console.log("Q5 Rating selected:", rating);
       // If rating is selected, navigate to the next screen
       navigation.navigate("SelfAssessmentScreen6");
     } else {
@@ -45,7 +46,7 @@ export default function SelfAssessmentScreen5({ navigation }) {
               ]}
               onPress={() => setRating(1)}
             >
-              <Text style={styles.buttonText}>1. Very Bad</Text>
+              <Text style={styles.buttonText}>1. Very Low</Text>
             </TouchableOpacity>
             {/* Option 2 */}
             <TouchableOpacity
@@ -55,7 +56,7 @@ export default function SelfAssessmentScreen5({ navigation }) {
               ]}
               onPress={() => setRating(2)}
             >
-              <Text style={styles.buttonText}>2. Bad</Text>
+              <Text style={styles.buttonText}>2. Low</Text>
             </TouchableOpacity>
             {/* Option 3 */}
             <TouchableOpacity
@@ -65,7 +66,7 @@ export default function SelfAssessmentScreen5({ navigation }) {
               ]}
               onPress={() => setRating(3)}
             >
-              <Text style={styles.buttonText}>3. Neither Good nor Bad</Text>
+              <Text style={styles.buttonText}>3. Neither High nor Low</Text>
             </TouchableOpacity>
             {/* Option 4 */}
             <TouchableOpacity
@@ -75,7 +76,7 @@ export default function SelfAssessmentScreen5({ navigation }) {
               ]}
               onPress={() => setRating(4)}
             >
-              <Text style={styles.buttonText}>4. Good</Text>
+              <Text style={styles.buttonText}>4. High</Text>
             </TouchableOpacity>
             {/* Option 5 */}
             <TouchableOpacity
@@ -85,7 +86,7 @@ export default function SelfAssessmentScreen5({ navigation }) {
               ]}
               onPress={() => setRating(5)}
             >
-              <Text style={styles.buttonText}>5. Very Good</Text>
+              <Text style={styles.buttonText}>5. Very High</Text>
             </TouchableOpacity>
             {/* Option 6 (Prefer not to answer) */}
             <TouchableOpacity
