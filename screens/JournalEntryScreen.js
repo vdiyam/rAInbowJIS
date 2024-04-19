@@ -88,7 +88,7 @@ export default function JournalEntryScreen({ navigation }) {
     <SafeAreaView style={styles.container}>
       <ImageBackground
         style={styles.background}
-        source={require("../assets/journal.png")}
+        source={require("../assets/selfasses.png")}
         resizeMode="cover"
       >
         <View style={styles.innerContainer}>
