@@ -37,7 +37,7 @@ export default function SelfAssesmentScreen6({ navigation }) {
             <TouchableOpacity
               style={[
                 styles.button,
-                { backgroundColor: rating === 1 ? "#E0E0B0" : "#E0E0B0" },
+                { backgroundColor: rating === 1 ? "#ff664d" : "#e68400" },
               ]}
               onPress={() => setRating(1)}
             >
@@ -46,7 +46,7 @@ export default function SelfAssesmentScreen6({ navigation }) {
             <TouchableOpacity
               style={[
                 styles.button,
-                { backgroundColor: rating === 2 ? "#F0E68C" : "#FFD700" },
+                { backgroundColor: rating === 2 ? "#ff664d" : "#ff9e1a" },
               ]}
               onPress={() => setRating(2)}
             >
@@ -55,7 +55,7 @@ export default function SelfAssesmentScreen6({ navigation }) {
             <TouchableOpacity
               style={[
                 styles.button,
-                { backgroundColor: rating === 3 ? "#FFFF00" : "#FFA500" },
+                { backgroundColor: rating === 3 ? "#ff664d" : "#ffb34d" },
               ]}
               onPress={() => setRating(3)}
             >
@@ -64,7 +64,7 @@ export default function SelfAssesmentScreen6({ navigation }) {
             <TouchableOpacity
               style={[
                 styles.button,
-                { backgroundColor: rating === 4 ? "#FFD700" : "#F0E68C" },
+                { backgroundColor: rating === 4 ? "#ff664d" : "#ffc980" },
               ]}
               onPress={() => setRating(4)}
             >
@@ -73,7 +73,7 @@ export default function SelfAssesmentScreen6({ navigation }) {
             <TouchableOpacity
               style={[
                 styles.button,
-                { backgroundColor: rating === 5 ? "#FFD700" : "#FFA500" },
+                { backgroundColor: rating === 5 ? "#ff664d" : "#ffdfb3" },
               ]}
               onPress={() => setRating(5)}
             >
@@ -131,7 +131,7 @@ const styles = StyleSheet.create({
   buttonText: {
     fontSize: 16,
     fontWeight: "bold",
-    color: "white",
+    color: "black",
   },
   buttonContainer: {
     flexDirection: "row",
@@ -141,7 +141,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   navButton: {
-    backgroundColor: "orange",
+    backgroundColor: "#ff664d",
     padding: 10,
     borderRadius: 5,
     flex: 1,

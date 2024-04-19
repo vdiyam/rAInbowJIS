@@ -38,7 +38,7 @@ export default function SelfAssesmentScreen10({ navigation }) {
             <TouchableOpacity
               style={[
                 styles.button,
-                { backgroundColor: rating === 1 ? "#E0E0B0" : "#E0E0B0" },
+                { backgroundColor: rating === 1 ? "turquoise" : "#005455" },
               ]}
               onPress={() => setRating(1)}
             >
@@ -47,7 +47,7 @@ export default function SelfAssesmentScreen10({ navigation }) {
             <TouchableOpacity
               style={[
                 styles.button,
-                { backgroundColor: rating === 2 ? "#F0E68C" : "#FFD700" },
+                { backgroundColor: rating === 2 ? "turquoise" : "#008d8e" },
               ]}
               onPress={() => setRating(2)}
             >
@@ -56,7 +56,7 @@ export default function SelfAssesmentScreen10({ navigation }) {
             <TouchableOpacity
               style={[
                 styles.button,
-                { backgroundColor: rating === 3 ? "#FFFF00" : "#FFA500" },
+                { backgroundColor: rating === 3 ? "turquoise" : "#00c5c6" },
               ]}
               onPress={() => setRating(3)}
             >
@@ -65,7 +65,7 @@ export default function SelfAssesmentScreen10({ navigation }) {
             <TouchableOpacity
               style={[
                 styles.button,
-                { backgroundColor: rating === 4 ? "#FFD700" : "#F0E68C" },
+                { backgroundColor: rating === 4 ? "turquoise" : "#39fdff" },
               ]}
               onPress={() => setRating(4)}
             >
@@ -74,7 +74,7 @@ export default function SelfAssesmentScreen10({ navigation }) {
             <TouchableOpacity
               style={[
                 styles.button,
-                { backgroundColor: rating === 5 ? "#FFD700" : "#FFA500" },
+                { backgroundColor: rating === 5 ? "turquoise" : "#aafeff" },
               ]}
               onPress={() => setRating(5)}
             >
@@ -142,7 +142,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   navButton: {
-    backgroundColor: "purple",
+    backgroundColor: "turquoise",
     padding: 10,
     borderRadius: 5,
     flex: 1,

@@ -35,7 +35,7 @@ export default function SelfAssessmentScreen2({ navigation }) {
             <TouchableOpacity
               style={[
                 styles.button,
-                { backgroundColor: rating === 1 ? "#FFFFE0" : "#FFFFE0" },
+                { backgroundColor: rating === 1 ? "gold" : "#999700" },
               ]}
               onPress={() => setRating(1)}
             >
@@ -44,7 +44,7 @@ export default function SelfAssessmentScreen2({ navigation }) {
             <TouchableOpacity
               style={[
                 styles.button,
-                { backgroundColor: rating === 2 ? "#F8DE7E" : "#F8DE7E" },
+                { backgroundColor: rating === 2 ? "gold" : "#dfdc00" },
               ]}
               onPress={() => setRating(2)}
             >
@@ -53,7 +53,7 @@ export default function SelfAssessmentScreen2({ navigation }) {
             <TouchableOpacity
               style={[
                 styles.button,
-                { backgroundColor: rating === 3 ? "#FFD300" : "#FFD300" },
+                { backgroundColor: rating === 3 ? "gold" : "#fffb00" },
               ]}
               onPress={() => setRating(3)}
             >
@@ -62,7 +62,7 @@ export default function SelfAssessmentScreen2({ navigation }) {
             <TouchableOpacity
               style={[
                 styles.button,
-                { backgroundColor: rating === 4 ? "#FFD700" : "#F0E68C" },
+                { backgroundColor: rating === 4 ? "gold" : "#fffd66" },
               ]}
               onPress={() => setRating(4)}
             >
@@ -71,7 +71,7 @@ export default function SelfAssessmentScreen2({ navigation }) {
             <TouchableOpacity
               style={[
                 styles.button,
-                { backgroundColor: rating === 5 ? "#EED202" : "#EED202" },
+                { backgroundColor: rating === 5 ? "gold" : "#fffecc" },
               ]}
               onPress={() => setRating(5)}
             >
@@ -139,7 +139,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   navButton: {
-    backgroundColor: "yellow",
+    backgroundColor: "gold",
     padding: 10,
     borderRadius: 5,
     flex: 1,

@@ -8,8 +8,6 @@ import {
   ImageBackground,
   Button,
 } from "react-native";
-import CustomButton from "../components/CustomButton";
-import { ButtonType } from "../components/CustomButton";
 
 export default function SelfAssesmentScreen3({ navigation }) {
   const [rating, setRating] = useState(null);
@@ -39,7 +37,7 @@ export default function SelfAssesmentScreen3({ navigation }) {
             <TouchableOpacity
               style={[
                 styles.button,
-                { backgroundColor: rating === 1 ? "#E6E6FA" : "#E6E6FA" },
+                { backgroundColor: rating === 1 ? "magenta" : "#450f45" },
               ]}
               onPress={() => setRating(1)}
             >
@@ -48,7 +46,7 @@ export default function SelfAssesmentScreen3({ navigation }) {
             <TouchableOpacity
               style={[
                 styles.button,
-                { backgroundColor: rating === 2 ? "#CCCCFF" : "#CCCCFF" },
+                { backgroundColor: rating === 2 ? "magenta" : "#741a72" },
               ]}
               onPress={() => setRating(2)}
             >
@@ -57,7 +55,7 @@ export default function SelfAssesmentScreen3({ navigation }) {
             <TouchableOpacity
               style={[
                 styles.button,
-                { backgroundColor: rating === 3 ? "#6A0DAD" : "#6A0DAD" },
+                { backgroundColor: rating === 3 ? "magenta" : "#d12ece" },
               ]}
               onPress={() => setRating(3)}
             >
@@ -66,7 +64,7 @@ export default function SelfAssesmentScreen3({ navigation }) {
             <TouchableOpacity
               style={[
                 styles.button,
-                { backgroundColor: rating === 4 ? "#C54B8C" : "#C54B8C" },
+                { backgroundColor: rating === 4 ? "magenta" : "#e58be4" },
               ]}
               onPress={() => setRating(4)}
             >
@@ -75,7 +73,7 @@ export default function SelfAssesmentScreen3({ navigation }) {
             <TouchableOpacity
               style={[
                 styles.button,
-                { backgroundColor: rating === 5 ? "#9966CC" : "#9966CC" },
+                { backgroundColor: rating === 5 ? "magenta" : "#efb9ef" },
               ]}
               onPress={() => setRating(5)}
             >
@@ -143,7 +141,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   navButton: {
-    backgroundColor: "purple",
+    backgroundColor: "magenta",
     padding: 10,
     borderRadius: 5,
     flex: 1,
