@@ -1,3 +1,4 @@
+//Import statements for necessary components and screens
 import { StyleSheet, Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
@@ -14,9 +15,11 @@ import SelfAssesmentScreen8 from "./screens/SelfAssesmentScreen8";
 import SelfAssesmentScreen9 from "./screens/SelfAssesmentScreen9";
 import SelfAssesmentScreen10 from "./screens/SelfAssesmentScreen10";
 
+//Create a Stack navigator
 const Stack = createStackNavigator();
 export default function App() {
   return (
+    // Navigation container to wrap the stack navigator
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Home" component={HomeScreen} />

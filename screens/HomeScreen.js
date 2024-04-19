@@ -1,4 +1,4 @@
-// Welcome Screen
+// Home Screen
 import React from "react";
 import {
   View,
@@ -21,11 +21,13 @@ export default function WelcomeScreen({ navigation }) {
           source={require("../assets/r.png")}
           resizeMode="cover"
         >
+          {/* Button to navigate to Self Assesment Questions */}
           <CustomButton
             title="Self Assesment Questions"
             type={ButtonType.PRIMARY}
             onPress={() => navigation.navigate("Self Assesment Questions")}
           />
+          {/* Button to navigate to Traditional Journal Entry */}
           <CustomButton
             title="Traditional Journal Entry"
             type={ButtonType.SECONDARY}

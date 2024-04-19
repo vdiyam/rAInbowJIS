@@ -46,39 +46,6 @@ export default function JournalEntryScreen({ navigation }) {
     loadJournalEntry();
   }, []);
 
-  // Effect to prevent leaving the screen without saving
-  useEffect(() => {
-    const backAction = () => {
-      if (isModified) {
-        // If the journal entry is modified, show an alert
-        Alert.alert(
-          "Discard changes?",
-          "Are you sure you want to leave without saving?",
-          [
-            {
-              text: "Cancel",
-              onPress: () => null,
-              style: "cancel",
-            },
-            {
-              text: "OK",
-              onPress: () => navigation.goBack(),
-            },
-          ]
-        );
-        return true;
-      }
-    };
-
-    const backHandler = BackHandler.addEventListener(
-      "hardwareBackPress",
-      backAction
-    );
-
-    return () => backHandler.remove();
-  }, [isModified, navigation]);
-
-  // Callback function to handle text input change
   const handleTextChange = useCallback((text) => {
     setJournalEntry(text);
     setIsModified(true);
